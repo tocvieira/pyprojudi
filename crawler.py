@@ -9,7 +9,7 @@ from scrapy.http import HtmlResponse
 class ProjudiSpider(Spider):
     name = 'projudi'
     batch_size = 42
-    loot_size = 42
+    loot_size = 1000
     custom_settings = {'DOWNLOAD_DELAY' : .05}
 
 
