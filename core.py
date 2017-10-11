@@ -10,6 +10,7 @@ def checkinternet():
     except:
         print(n)
         driver.quit()
+        pass
 
 def main():
 
@@ -29,7 +30,7 @@ def main():
     url = 'https://projudi.tjba.jus.br/projudi/listagens/DownloadArquivo?arquivo={}'
     for n in range(1, 10001):
         try:
-            checkinternet()
+            #checkinternet()
             driver.set_page_load_timeout(1)
             driver.get(url.format(n))
             time.sleep(5)
@@ -39,4 +40,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-    
