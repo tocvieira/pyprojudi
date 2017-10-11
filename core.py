@@ -1,10 +1,12 @@
+# obsolete
+
 from selenium import webdriver
 from selenium.webdriver.firefox.firefox_profile import FirefoxProfile
 import time
 import urllib
 
 def checkinternet():
-    """ Check internet conection. If internet is down, print the last URL"""
+    """Check internet conection. If internet is down, print the last URL"""
     try:
         urllib.request.urlopen('http://www.google.com')
     except:
