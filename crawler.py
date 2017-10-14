@@ -8,9 +8,10 @@ from scrapy.http import HtmlResponse
 
 class ProjudiSpider(Spider):
     name = 'projudi'
-    batch_size = 42
-    loot_size = 10000000
-    custom_settings = {'DOWNLOAD_DELAY' : .05}
+    batch_size = 100 #Set size of batch of verification.
+    loot_size = 10000000 # Set the maximum number of pages to be copied.
+    custom_settings = {'CONCURRENT_REQUESTS': 4, 'DOWNLOAD_DELAY' : .05} # It limits the speed of the crawler to
+    # avoid that the service is harmed.
 
 
     def __init__(self, *args, **kwargs):
